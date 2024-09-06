@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>selectMenu</title>
+</head>
+<body>
+
+    <div th:replace="common/header.html"></div>
+    <h2>선택하신 메뉴의 상세 정보입니다. (๑'ᵕ'๑)⸝*</h2>
+
+        <div>
+            <p>메뉴번호: <span th:text="${ menu.code }"></span></p>
+            <p>메뉴이름: <span th:text="${ menu.name }"></span></p>
+            <p>메뉴가격: <span th:text="${ menu.price }"></span></p>
+            <p>카테고리토드: <span th:text="${ menu.categoryCode }"></span></p>
+            <p>판매상태: <span th:text="${ menu.orderableStatus }"></span></p>
+        </div>
+
+        <!-- 목록으로 돌아가는 버튼 -->
+        <button onclick="location.href='/menu/list'">전체목록으로 돌아가기</button>
+</body>
+</html>
